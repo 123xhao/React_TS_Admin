@@ -2,8 +2,9 @@
 import {useRef} from "react";
 // import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
 // import CustomObject from "./CustomObject";
-import {MeshReflectorMaterial,Float,Text,Html,PivotControls,TransformControls,OrbitControls} from "@react-three/drei";
+import {Sky,MeshReflectorMaterial,Float,Text,Html,PivotControls,TransformControls,OrbitControls} from "@react-three/drei";
 import './demoCSS.css'
+import {Perf} from "r3f-perf";
 // extend({OrbitControls})
 
 const useLight=()=>{
@@ -24,12 +25,15 @@ const useLight=()=>{
     // })
     return(
         <>
+            <Perf position='top-left'/>
             {/*<orbitControls args={[camera,gl.domElement]}/>*/}
             <OrbitControls makeDefault />
 
             <directionalLight position={[1,2,3]} intensity={1.5} />
 
             <ambientLight intensity={1.5}/>
+
+            <Sky />
 
             <group ref={groupRef}>
                 <TransformControls position-x={-2} mode="translate">
