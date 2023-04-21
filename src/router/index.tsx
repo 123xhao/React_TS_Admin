@@ -5,6 +5,7 @@ import ThreeA from "../views/Three";
 import ThreeReactHome from "../views/ThreeReactHome";
 import ThreeReactDemo from '../views/ThreeReact/demo'
 import ThreeReactDemoTwo from '../views/ThreeReact/demo2'
+import ThreeReactDemoThree from '../views/ThreeReact/demo3'
 
 const routes = [
     {
@@ -29,6 +30,7 @@ const routes = [
         children: [
             { path: '', element: <ThreeReactDemo /> },
             { path: 'two', element: <ThreeReactDemoTwo /> },
+            { path: 'three', element: <ThreeReactDemoThree /> },
         ],
     },
     {

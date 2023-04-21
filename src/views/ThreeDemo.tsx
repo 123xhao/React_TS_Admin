@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import {ColorRepresentation} from "three";
 import image from "../assets/earth.jpg";
-import haloImage from '../assets/aa.jpg'
 const StarBackground: React.FC = () => {
     const mountRef = useRef<HTMLDivElement>(null);
 
@@ -94,20 +93,9 @@ const StarBackground: React.FC = () => {
         width:'100%',
         height:'100%'
     }
-    const loginBox={
-        position:'absolute',
-        top:'10%',
-        right:'5%',
-        width:'30%',
-        height:'80%',
-        background:'skyblue'
-    }
     return (
         <div style={bigBox}>
             <div ref={mountRef} ></div>
-            <div style={loginBox}>
-                <div>THREE</div>
-            </div>
         </div>
     );
 };
