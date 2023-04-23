@@ -1,41 +1,33 @@
-import Home from '../views/Home';
-import About from '../views/About';
-import ThreeDemo from "../views/ThreeDemo";
-import ThreeA from "../views/Three";
-import ThreeReactHome from "../views/ThreeReactHome";
-import ThreeReactDemo from '../views/ThreeReact/demo'
-import ThreeReactDemoTwo from '../views/ThreeReact/demo2'
-import ThreeReactDemoThree from '../views/ThreeReact/demo3'
+import ThreeLogin from '../views/ThreeLogin/index';
+import ThreeDemoOne from '../views/ThreeReact/demo'
+import ThreeDemoTwo from '../views/ThreeReact/demo2'
+import ThreeDemoThree from '../views/ThreeReact/demo3'
+import ThreeDemoFour from '../views/ThreeReact/demo4'
 
 const routes = [
     {
-      path: '/about/:id',
-      element: <About />,
+        path: '/',
+        element: <ThreeLogin />,
     },
     {
-      path: '/',
-      element: <Home />,
+        path: '/demo1',
+        element: <ThreeDemoOne />,
     },
     {
-        path: '/threeDemo',
-        element: <ThreeDemo />,
+        path: '/demo2',
+        element: <ThreeDemoTwo />,
     },
     {
-        path: '/three',
-        element: <ThreeA />,
+        path: '/demo3',
+        element: <ThreeDemoThree />,
     },
     {
-        path: '/threeReactHome',
-        element: <ThreeReactHome />,
-        children: [
-            { path: '', element: <ThreeReactDemo /> },
-            { path: 'two', element: <ThreeReactDemoTwo /> },
-            { path: 'three', element: <ThreeReactDemoThree /> },
-        ],
+        path: '/demo4',
+        element: <ThreeDemoFour />,
     },
     {
         path: '*',
-        element: <Home />,
+        element: <ThreeLogin />,
     }
   ]
 
