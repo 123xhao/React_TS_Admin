@@ -21,7 +21,6 @@ function Login() {
     useFrame((state, delta)=>{
         sphereRef.current.rotation.y+=0.01 // 物体单方面旋转
     })
-
     return (
         <>
             <Sky
